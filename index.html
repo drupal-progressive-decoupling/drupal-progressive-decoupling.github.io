@@ -1,0 +1,1016 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Progressive decoupling - The why and the how - Drupal Developer Days Lisbon 2018</title>
+
+    <meta name="description" content="Progressive decoupling " />
+    <meta name="author" content="Błażej Owczarczyk" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/highlight-solarized-light.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="footer">
+  <div class="half float-left">Błażej Owczarczyk (@os_blazey)</div>
+  <div class="hafl text-right">Drupal Developer Days Lisbon 2018</div>
+</div>
+
+<div id="impress">
+
+    <div id="conference" class="step slide text-center" data-x="-1500" data-y="-4000">
+      <div class="slide-content justify-vertically">
+        <img src="assets/img/logo.svg" />
+        <div>
+          <p>Drupal Developer Days</p>
+          <p>Lisbon 2018</p>
+        </div>
+        <div>
+          <p>Progressive decoupling</p>
+          <p>The why and the how</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="sponsors-diamond" class="step slide text-center" data-x="-500" data-y="-4000">
+      <h2>Diamond sponsor</h2>
+      <div class="slide-content justify-vertically diamond">
+        <img src="assets/img/acquia.svg" class="sponsor-logo" />
+      </div>
+    </div>
+
+    <div id="sponsors-platinium" class="step slide text-center" data-x="500" data-y="-4000">
+      <h2>Platinium sponsors</h2>
+      <div class="slide-content justify-vertically platinium">
+        <img src="assets/img/wunder.svg" class="sponsor-logo" />
+        <img src="assets/img/platform-sh.svg" class="sponsor-logo" />
+      </div>
+    </div>
+
+    <div id="sponsors-gold" class="step slide text-center" data-x="1500" data-y="-4000">
+      <h2>Gold sponsors</h2>
+      <div class="slide-content three-col gold">
+        <img src="assets/img/commerce-guys.jpg" class="sponsor-logo" />
+        <img src="assets/img/1xinternet.png" class="sponsor-logo" />
+        <img src="assets/img/bloomidea.svg" class="sponsor-logo" />
+        <img src="assets/img/everis.jpg" class="sponsor-logo" />
+        <img src="assets/img/nuvole.png" class="sponsor-logo" />
+        <img src="assets/img/thunder.png" class="sponsor-logo" />
+        <div>&nbsp;</div>
+        <img src="assets/img/amazee-labs.svg" class="sponsor-logo" />
+      </div>
+    </div>
+
+    <div id="sponsors-session" class="step slide text-center" data-x="2800" data-y="-4000">
+      <h2>Session co-sponsors</h2>
+      <div class="slide-content justify-vertically">
+        <img src="assets/img/session-sponsor.jpg" style="width: 80%;" />
+      </div>
+    </div>
+
+    <div id="whoami" class="step snippet text-center sans" data-x="4200" data-y="-4000">
+      <div class="notes">
+        <ul>
+          <li>The most stressed person in the room</li>
+          <li>First time speaker</li>
+        </ul>
+      </div>
+      whoami
+      <!-- <pre><code lang="shell">$ whoami
+blazey</code></pre> -->
+    </div>
+
+    <div id="blazej" class="step text-center sans" data-x="5600" data-y="-4000">
+      <pre>Blazej Owczarczyk
+
+@os_blazey</pre>
+    </div>
+
+    <div id="developer" class="step text-center sans" data-x="7000" data-y="-4000">
+      <div class="notes">
+        <ul>
+          <li>Workingn with Drupal, React and Vue.js</li>
+          <li>Working on fully and progressively decoupled projects</li>
+        </ul>
+      </div>
+      <pre>PHP & Javascript Developer
+
+Amazee Labs Zurich</pre>
+    </div>
+
+    <div id="title" class="step text-center shift-up" data-x="0" data-y="0" data-scale="6">
+      <q>Progressive decoupling</q>
+    </div>
+
+    <div id="the-why" class="step shift-up" data-x="900" data-y="-200" data-scale="4">
+      <q>The why</q>
+    </div>
+
+    <div id="fully-decoupled" class="step text-center shift-up" data-x="-1200" data-y="-500" data-rotate="-90" data-scale="3">
+      <div class="notes">
+        <ul>
+          <li>Do whatever needs to be done</li>
+        </ul>
+      </div>
+      <div class="big">Fully decoupled</div>
+    </div>
+
+    <div id="power-to-the-people" class="step text-center" data-x="-1350" data-y="-930" data-scale="3">
+      <h2>POWER</h2>
+    </div>
+
+    <div id="no-compromises" class="step text-center" data-x="-1350" data-y="-800" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Do whatever needs to be done</li>
+        </ul>
+      </div>
+      <div class="small">No compromises</div>
+    </div>
+
+    <div id="performance" class="step text-center" data-x="-1350" data-y="-700" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Best possible performance</li>
+        </ul>
+      </div>
+      <div class="small">Performance</div>
+    </div>
+
+    <div id="ux" class="step text-center" data-x="-1350" data-y="-600" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Stellar user experinces</li>
+        </ul>
+      </div>
+      <div class="small">UX</div>
+    </div>
+
+    <div id="with-great-power-comes-great" class="step" data-x="-100" data-y="50" data-rotate-x="-90">
+      with great power comes great
+    </div>
+
+    <div id="responsibility" class="step text-center" data-x="-300" data-y="-500" data-rotate="90" data-scale="3">
+      <div class="notes">
+        <ul>
+          <li>Easy tasks become complex</li>
+        </ul>
+      </div>
+      <h2>RESPONSIBILITY</h2>
+    </div>
+
+    <div id="forms-api" class="step text-center" data-x="-450" data-y="-595" data-rotate="90" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Extremly potent</li>
+          <li>Secure</li>
+          <li>Pluggable</li>
+          <li>States system</li>
+          <li>Ajax system</li>
+          <li>Well defined validation - submission flow</li>
+          <li>Validation out of the box</li>
+          <li>Huge component libray, eg. text, email, number, file, entity reference</li>
+          <li>There are no js tools that can be compared to FAPI.</li>
+          <li>Validation and submission need to be implemented from scratch.</li>
+          <li>All the forms need to be built from scratch, even those that drupal handles well.</li>
+          <li>The more entity references the harder the implementation is.</li>
+          <li
+        </ul>
+      </div>
+      ✖ Forms API
+    </div>
+
+    <div id="views" class="step text-center" data-x="-600" data-y="-595" data-rotate="90" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Views are so good.</li>
+          <li>We are so used to them that we may underestimate the underlying complexity.</li>
+          <li>We're used to the fact that a table listing with paging, exposed filters, click sorting and bulk operations takes a few dozen clicks.</li>
+          <li>Implement the table template from scratch.</li>
+          <li>Add markup for the exposed filters form.</li>
+          <li>Then fetch the initial data with the number of pages and allowed values for exposed filters.</li>
+          <li>Implement a pager.</li>
+          <li>Implement the url parsing logic to get the current page and values for exposed filters.</li>
+          <li>Check which colums are sortable, turn then into links and pass the sort order to the query.</li>
+        </ul>
+      </div>
+      ✖ Views
+    </div>
+
+    <div id="authentication" class="step text-center" data-x="-750" data-y="-595" data-rotate="90" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Ok when the frontend and the backend share top parts of the domain.</li>
+          <li>No untrusted apps should share it.</li>
+          <li>If not - OAuth.</li>
+          <li>Simple OAuth works fine.</li>
+          <li>Hard to implement securely on frontend (SSR, refreshing tokens).</li>
+        </ul>
+      </div>
+      <pre>  Authentication</pre>
+    </div>
+
+    <div id="drupal-love" class="step" data-x="-500" data-y="250" data-scale="3">
+      <div class="notes">
+        <ul>
+          <li>Drupal spoils us.</li>
+          <li>Once we learn the abstractions we become extremly efficient.</li>
+          <li>Lost when going fully decoupled.</li>
+          <li>Sometimes there are no alternatives, eg. mobile apps.</li>
+          <li>However, for web projects we can use...</li>
+        </ul>
+      </div>
+      <span>❤ Drupal ❤</span>
+    </div>
+
+    <div id="progressive-decoupling" class="step text-center shift-up" data-x="-1200" data-y="1200" data-rotate="-90" data-scale="3">
+       Progressive decoupling
+    </div>
+
+    <div id="the-best-of-both-worlds" class="step text-center section" data-x="-1500" data-y="1200" data-rotate="-90" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Front end frameworks are really easy and intuitive when building components.</li>
+        </ul>
+      </div>
+      <div class="top">the</div>
+      <div class="huge">best</div>
+      <div class="bottom">of both worlds</div>
+    </div>
+
+    <div id="drupal-when-you-need-it" class="step text-right" data-x="-1500" data-y="1200" data-rotate="-90" data-rotate-y="-90" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>Login</li>
+          <li>Content editing</li>
+          <li>Existing functionalities</li>
+        </ul>
+      </div>
+      <span>Drupal when you need it</span>
+    </div>
+
+    <div id="decoupled-when-it-makes-sense" class="step text-right" data-x="-1500" data-y="1200" data-z="-1000" data-rotate="-90" data-rotate-y="-90" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>Many possibilities.</li>
+          <li>Few examples</li>
+        </ul>
+      </div>
+      <span>decoupled when it makes sense</span>
+    </div>
+
+    <div id="use-cases" class="step text-center section" data-x="-700" data-y="1200" data-z="0" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Front end frameworks are really easy and intuitive when building components.</li>
+        </ul>
+      </div>
+      <div class="huge">use</div>
+      <div class="bottom">cases</div>
+    </div>
+
+    <div id="data-from-external-sources" class="step text-right" data-x="-700" data-y="1500" data-z="-2400" data-rotate-x="-90" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>decreases page load time (drastically)</li>
+          <li>improves perceived performance</li>
+          <li>reduce webserver's network traffic</li>
+        </ul>
+      </div>
+      <span>data from external sources</span>
+    </div>
+
+    <div id="testability" class="step text-right" data-x="-700" data-y="1500" data-rotate-x="-90" data-z="-2450" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>decoupling makes it easy to test</li>
+          <li>don't even use oAuth</li>
+          <li>requires CORS</li>
+        </ul>
+      </div>
+      <span>rich, testable UIs</span>
+    </div>
+
+    <div id="existing-projects" class="step text-right" data-x="-700" data-y="1500" data-rotate-x="-90" data-z="-2500" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>easy to integrate</li>
+          <li>swap one page or block without touching the rest of the site</li>
+        </ul>
+      </div>
+      <span>existing projects</span>
+    </div>
+
+    <div id="the-how" class="step shift-up" data-x="2700" data-y="-200" data-scale="4">
+      The how
+    </div>
+
+    <div id="twig" class="step" data-x="2300" data-y="-900" data-scale="3">
+      <div class="notes">
+        <ul>
+          <li>the easiest way to decouple for drupalers</li>
+          <li>use graphql to fetch data</li>
+          <li>render in twig</li>
+        </ul>
+      </div>
+      Twig
+    </div>
+
+    <div id="decopled-templates-without-js" class="step text-center" data-x="1500" data-rotate="90" data-scale="2">
+      no js
+    </div>
+
+    <div id="graphql-twig-easy-setup" class="step" data-x="1900" data-y="-700" data-scale="2">
+      easy setup
+    </div>
+
+    <div id="graphql-twig-enable-the-module" class="step text-center" data-x="1150" data-y="-800" data-scale="0.1">
+      <div>enable <a href="https://www.drupal.org/project/graphql_twig">graphql_twig</a></div>
+    </div>
+
+    <div id="graphql-twig-declare-data-dependencies" class="step slide" data-x="1150" data-y="-800" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>declare data dependencies in the template file</li>
+          <li>isolated and self-contained templates</li>
+          <li>power to the themer</li>
+        </ul>
+      </div>
+      <h2 class="text-right">greeting.html.twig</h2>
+      <pre><code lang="twig">{#graphql</code><code lang="graphql">  query {
+    user:currentUserContext {
+      name
+    }
+  }</code><code lang="twig">#}
+
+&lt;div&gt;
+  Hi { user.name }, good to see you again.
+&lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div id="graphql-twig-author" class="step text-center" data-x="1280" data-y="-800" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>maintainer of the GraphQL module</li>
+          <li>really cool guy</li>
+          <li>he can sing, at least it looks like so</li>
+          <li>had to cancel the session about GraphQL Twig</li>
+          <li>let's all send him a thank you tweet</li>
+        </ul>
+      </div>
+      <div>Created by Philipp Melab</div>
+      <br />
+      <img src="assets/img/philipp.png" width="296" height="264" />
+    </div>
+
+    <div id="graphql-twig-author-tweet" class="step text-center loose sans" data-x="1410" data-y="-800" data-scale="0.1">
+      <div>@pmelab thanks for all the contributions. You rock!</div>
+    </div>
+
+    <div id="javascript" class="step text-center" data-x="2000" data-y="-400" data-rotate="90" data-scale="3">
+      <div class="large">Javascript</div>
+    </div>
+
+    <div id="modern-js" class="step" data-x="2600" data-y="350" data-scale="2">
+      Modern JS
+    </div>
+
+    <div id="es6" class="step text-center" data-x="1940" data-y="550" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>ECMAScript 2015</li>
+          <li>revolutionary changes</li>
+        </ul>
+      </div>
+      <div class="larger">ES6</div>
+    </div>
+
+    <div id="es6-deconstructing-assignment" class="step snippet" data-x="2000" data-y="750" data-rotate-x="-90" data-scale="0.5">
+      <div class="text-center">Deconstructing assignment</div>
+<pre>
+    <code lang="javascript">const { width, height, depth } = product.dimensions</code></pre>
+    </div>
+
+    <div id="es6-property-shorthand" class="step snippet" data-x="2000" data-y="750" data-z="-2800" data-rotate-x="-90" data-scale="0.5">
+      <div class="text-center">Property shorthand</div>
+<pre>
+  <code lang="javascript">const person = { firstName, lastName }</code></pre>
+    </div>
+
+    <div id="es6-spread-syntax" class="step snippet" data-x="2000" data-y="750" data-z="-3100" data-rotate-x="-90" data-scale="0.5">
+      <div class="text-center">Spread syntax</div>
+<pre>
+  <code lang="javascript">const order = { ...customer, ...address }</code></pre>
+    </div>
+
+    <div id="es6-default-parameter-values" class="step snippet" data-x="2000" data-y="750" data-z="-3400" data-rotate-x="-90" data-scale="0.5">
+      <div class="notes">
+        <ul>
+          <li>js finally joined the family of laguages supporting default parameters</li>
+        </ul>
+      </div>
+      <div class="text-center">Default parameter values</div>
+<pre>
+  <code lang="javascript">const getProperty = function (object, property = 'value') {
+  return object[property]
+}</code></pre>
+    </div>
+
+    <div id="es6-arrow-functions" class="step snippet" data-x="2000" data-y="750" data-z="-3700" data-rotate-x="-90" data-scale="0.5">
+      <div class="notes">
+        <ul>
+          <li>not only syntax</li>
+          <li>inherits this from the parent scope</li>
+        </ul>
+      </div>
+      <div class="text-center">Arrow functions</div>
+<pre>
+  <code lang="javascript">const getArea = (dims) => dims.width * dims.height</code>
+</pre>
+    </div>
+
+  <div id="es6-arrow-functions-lexical-this" class="step snippet" data-x="2000" data-y="750" data-z="-4000" data-rotate-x="-90" data-scale="0.5">
+      <div class="text-center">... with lexical this</div>
+<pre>
+  <code lang="javascript">this.cartItems.forEach(item => {
+  this.total += item.cost
+})</code>
+</pre>
+    </div>
+
+    <div id="es6-classes" class="step snippet" data-x="2000" data-y="750" data-z="-4400" data-rotate-x="-90" data-scale="0.5">
+      <div class="text-center">Classes</div>
+<pre>
+  <code lang="javascript">class Rectangle extends Shape {
+  constructor (id, x, y, width, height) {
+      super(id, x, y)
+      this.width  = width
+      this.height = height
+  }
+}
+class Circle extends Shape {
+  constructor (id, x, y, radius) {
+      super(id, x, y)
+      this.radius = radius
+  }
+};
+// Example from http://es6-features.org</code></pre>
+    </div>
+
+    <div id="es6-template-literals" class="step snippet" data-x="2000" data-y="750" data-z="-4800" data-z="-2500" data-rotate-x="-90" data-scale="0.5">
+      <div class="notes">
+        <ul>
+          <li>Multiline</li>
+          <li>inherits this from the parent scope</li>
+        </ul>
+      </div>
+      <div class="text-center">Template literals</div>
+<pre>
+  <code lang="javascript">const greeting = `Hi ${firstName} ${lastName}`</code></pre>
+    </div>
+
+    <div id="es7" class="step text-center" data-x="2120" data-y="500" data-z="-2500" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>ECMAScript 2016</li>
+          <li>not very revolutionary</li>
+          <li>the exponentiation operator **</li>
+          <li>Array.prototype.includes</li>
+        </ul>
+      </div>
+      <div class="small">ES7</div>
+    </div>
+
+    <div id="es8" class="step text-center" data-x="2180" data-y="540" data-z="-2500" data-rotate="90" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>ECMAScript 2017</li>
+          <li>just one feature, but a powerful one</li>
+        </ul>
+      </div>
+      <div class="large">ES8</div>
+    </div>
+
+    <div id="es8-async-evolution-callbacks" class="step snippet" data-x="2480" data-y="540" data-rotate="90" data-rotate-y="90" data-scale="0.5">
+      <div class="notes">
+        <ul>
+          <li>The evolution of async code</li>
+        </ul>
+      </div>
+      <div class="text-center">ES5 - callbacks</div>
+<pre>
+  <code lang="javascript">$.ajax({
+  url: 'https://swapi.co/api/people/1',
+  success: function (person) {
+    $.ajax({
+      url: person.homeworld,
+      success: function (planet) {
+        setHomeworld(person, planet)
+      },
+    );
+  },
+);</code></pre>
+    </div>
+
+    <div id="es8-async-evolution-promises" class="step snippet" data-x="2480" data-y="540" data-z="-2900" data-rotate="90" data-rotate-y="90" data-scale="0.5">
+      <div class="text-center">ES6 - promises</div>
+<pre>
+  <code lang="javascript">fetch('https://swapi.co/api/people/1')
+  .then(response => response.json())
+  .then((person) => {
+    fetch(person.homeworld)
+      .then(response => response.json())
+      .then((planet) => {
+        setHomeworld(person, planet)
+      })
+  });
+</code></pre>
+    </div>
+
+    <div id="es8-async-evolution-await" class="step snippet" data-x="2480" data-y="540" data-z="-3300" data-rotate="90" data-rotate-y="90" data-scale="0.5">
+      <div class="notes">
+        <ul>
+          <li>No callback hell</li>
+          <li>No nesting</li>
+          <li>Looks like sync code</li>
+          <li>Readable</li>
+          <li>Implemented using generators</li>
+        </ul>
+      </div>
+      <div class="text-center">ES8 - async/await</div>
+<pre>
+  <code lang="javascript">const personResponse = await fetch('https://swapi.co/api/people/1')
+const person = await personResponse.json()
+
+const planetResponse = await fetch(person.homeworld)
+const planet = await planetResponse.json()
+
+setHomeworld(person, planet)
+</code></pre>
+    </div>
+
+    <div id="embedding" class="step text-center" data-x="1450" data-y="-400" data-z="-2500" data-scale="3">
+        <div class="">Embedding</div>
+    </div>
+
+    <div id="core-es6" class="step text-center" data-x="1200" data-y="-150" data-z="-2500" data-rotate="-90" data-scale="2">
+      <div class="large">JS</div>
+      <div class="smaller">modernization</div>
+    </div>
+
+    <div id="core-es6-cr" class="step text-center" data-x="1350" data-y="-150" data-rotate="-90" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>Since 8.4</li>
+        </ul>
+      </div>
+      <a href="https://www.drupal.org/node/2815083" class="loose">Drupal core now using ES6 for javascript development</a>
+    </div>
+
+    <div id="core-es6-core" class="step" data-x="1825" data-y="-220" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>It was designed for drupal core</li>
+        </ul>
+      </div>
+      ✔️ core
+    </div>
+
+    <div id="core-es6-core" class="step" data-x="1825" data-y="-150" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>It was designed for drupal core</li>
+        </ul>
+      </div>
+      ✖ contrib
+    </div>
+
+    <div id="core-es6-core" class="step" data-x="1825" data-y="-80" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>It was designed for drupal core</li>
+        </ul>
+      </div>
+      ✖ custom
+    </div>
+
+    <div id="core-es6-patch" class="step" data-x="1780" data-y="200" data-rotate="90" data-scale="1">
+      Patch
+    </div>
+
+    <div id="core-es6-issue" class="step" data-x="1750" data-y="-150" data-rotate="90" data-scale="0.01">
+      <div class="notes">
+        <ul>
+          <li>use package.json from core</li>
+          <li>postponed because of a bug in babel-cli</li>
+          <li>may work (it did at some point)</li>
+        </ul>
+      </div>
+      <a href="https://www.drupal.org/project/drupal/issues/2957390" class="loose">[#2957390] Use ES6 for contrib and custom JavaScript development</a>
+    </div>
+
+    <div id="core-es6-how-to-use-now" class="step snippet" data-x="1740" data-y="-150" data-rotate="90" data-scale="0.01">
+      <div class="text-center">Use core ES6 transpilation</div>
+      <pre>
+        <code lang="shell">yarn watch:js-dev --dir ../modules/custom # local development</code></pre>
+      <pre>
+        <code lang="shell">yarn build:js --dir ../modules/custom # optimized build</code></pre>
+    </div>
+
+    <div id="core-es6-commit-or-not-to-commit" class="step section text-center" data-x="1730" data-y="-150" data-rotate="90" data-scale="0.01">
+      <div class="small">to</div>
+      <div class="bit-larger">commit</div>
+      <div class="small">or not to</div>
+      <div class="bit-larger">commit</div>
+    </div>
+
+    <div id="core-es6-commit-in-contrib" class="step" data-x="1728" data-y="-150" data-rotate="90" data-scale="0.01">
+      <div class="notes">
+        <ul>
+          <li>Users shouldn't need to set up a bundler</li>
+          <li>Commit both .es6.js and .js</li>
+          <li>You can use es6 in your contrib module now!</li>
+        </ul>
+      </div>
+      ✔️ contrib
+    </div>
+
+    <div id="core-es6-dont-commit-in-custom" class="step text-right" data-x="1728" data-y="-150" data-rotate="90" data-scale="0.01">
+      <div class="notes">
+        <ul>
+          <li>Artifacts should never be commited</li>
+          <li>Output should be minified</li>
+          <li>Conflict in minified code are impossible to sort out</li>
+          <li>It might be fine in a single-developer set up</li>
+        </ul>
+      </div>
+      ✖️ custom
+    </div>
+
+    <div id="core-es6-build-at-deploy" class="step snippet" data-x="1725" data-y="-147" data-rotate="90" data-scale="0.01">
+      <div class="notes">
+        <ul>
+          <li>Build at deploy time instead</li>
+        </ul>
+      </div>
+      <pre>
+        <code lang="dockerfile">RUN yarn install --pure-lockfile && yarn build:js</code></pre>
+    </div>
+
+    <div id="core-es6-imports" class="step text-center" data-x="1325" data-y="0" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>Transpilation is not a silver bullet</li>
+          <li>Adding npm packages is tedious</li>
+          <li>It needs to be easy if we want people to start contributing</li>
+        </ul>
+      </div>
+      <div>npm dependencies?</div>
+    </div>
+
+    <div id="webpack" class="step text-center" data-x="1180" data-y="280" data-rotate="-90" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>Official starterkits for both react and vue are based on it</li>
+          <li>Add any npm package with yarn add</li>
+        </ul>
+      </div>
+      Webpack
+    </div>
+
+    <div id="vuejs-recipe" class="step section text-center" data-x="1450" data-y="150" data-scale="1">
+      <div class="small">recipe for</div>
+      <div class="large">Vuejs</div>
+    </div>
+
+    <div id="vuejs-init-project" class="step snippet" data-x="1450" data-y="250" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>requires vue-cli</li>
+          <li>vue is just a folder name</li>
+        </ul>
+      </div>
+      <div class="text-center">Initialize a vue project</div>
+<pre>
+  <code lang="shell">cd my_module
+vue create vue</code></pre>
+    </div>
+
+    <div id="vuejs-hook_library_info_build" class="step snippet" data-x="1450" data-y="300" data-scale="0.1">
+      <div class="text-center">Define a dynamic library</div>
+      <pre>
+        <code lang="php">function hook_library_info_build()</code></pre>
+    </div>
+
+    <div id="vuejs-dev-script" class="step snippet" data-x="1450" data-y="370" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>add the bundle from webpack dev server to drupal</li>
+          <li>drupal becomes a webpack dev server</li>
+          <li>page reloads when changes to the files are detected</li>
+        </ul>
+      </div>
+      <div class="text-center">Connect with webpack dev server</div>
+<pre>
+  <code lang="shell">yarn serve # start dev server at port 8080</code></pre>
+<pre>
+  <code lang="php">  $library['js']['http://localhost:8080/app.js'] = [
+    'type' => 'external',
+  ];</code></pre>
+    </div>
+
+    <div id="vuejs-prod-build" class="step snippet" data-x="1450" data-y="440" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>it's best not to commit dist</li>
+          <li>build for production in a deployment step</li>
+          <li>include the files from dist in production environment</li>
+          <li>the flow is similar in react</li>
+        </ul>
+      </div>
+      <div class="text-center">Build for prod</div>
+<pre>
+  <code lang="dockerfile">RUN yarn install --pure-lockfile && yarn build</code></pre>
+<pre>
+  <code lang="php">file_scan_directory($dist_path, '/^.*\.js$/')</code></pre>
+    </div>
+
+    <div id="communicating-with-drupal" class="step shift-up" data-x="3800" data-y="-150" data-z="-2500" data-scale="3">
+      <div class="notes">
+        <ul>
+          <li>possible thanks to the api first initiative</li>
+        </ul>
+      </div>
+      Communication
+    </div>
+
+    <div id="drupal-settings" class="step" data-x="3410" data-y="-700" data-scale="2">
+      <div class="notes">
+        <ul>
+          <li>read-only data</li>
+          <li>ok for simple widgets</li>
+        </ul>
+      </div>
+      drupalSettings
+    </div>
+
+    <div id="drupal-settings-snippet" class="step snippet" data-x="3000" data-y="-550" data-rotate-x="-90" data-scale="0.1">
+<pre>
+  <code lang="php">$library['dependencies'][] = 'core/drupalSettings';</code></pre>
+    </div>
+
+    <div id="multi-step-widget" class="step" data-x="3000" data-y="-550" data-z="-2800" data-rotate-x="-90" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>guided product selection</li>
+          <li>redirects to a view with facets pre-set</li>
+          <li>built in react</li>
+          <li>zero-latency navigation</li>
+          <li>this is what the users are expecting</li>
+        </ul>
+      </div>
+      <img src="assets/video/ublox-guided-product-selector.gif" class="full-width" />
+    </div>
+
+    <div id="graphql" class="step text-center" data-x="3710" data-y="-800" data-z="-2500" data-rotate="90" data-scale="2">
+        <div class="notes">
+          <ul>
+            <li>alternative to core REST and JSON API</li>
+            <li>Reading and querying content entities out of the box</li>
+            <li>Mutations need to be implemented</li>
+            <li>Quite convenenient in general</li>
+          </ul>
+        </div>
+      GraphQL
+    </div>
+
+    <div id="apollo-boost" class="step snippet" data-x="3750" data-y="-100" data-z="-2650" data-rotate-y="-90" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>pre-configured package</li>
+        </ul>
+      </div>
+      <div class="text-center">Install apollo-boost</div>
+<pre>
+  <code lang="shell">yarn add apollo-boost graphql</code></pre>
+    </div>
+
+    <div id="graphql-example" class="step snippet" data-x="3750" data-y="-100" data-z="-2500" data-rotate-y="-90" data-scale="0.1">
+        <div class="notes">
+          <ul>
+            <li>No configuration needed</li>
+            <li>/graphql is the default endpoint</li>
+          </ul>
+        </div>
+        <div class="text-center">Import it</div>
+  <pre>
+    <code lang="javascript">import ApolloClient, { gql } from 'apollo-boost';
+const client = new ApolloClient();</code></pre>
+      </div>
+
+    <div id="graphql-query" class="step snippet" data-x="3750" data-y="-100" data-z="-2350" data-rotate-y="-90" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>Fetch everything you need in one simple query</li>
+          <li>Picture is a separate entity</li>
+          <li>Nesting level limited by memory limit</li>
+          <li>Response format defined by the query</li>
+        </ul>
+      </div>
+      <div class="text-center">Have fun!</div>
+<pre>
+  <code lang="javascript">const query = gql`
+  query {
+    user: currentUserContext {
+      ... on UserUser {
+        name
+        fieldLocation
+        picture: userPicture {
+          url
+          alt
+          title
+        }
+      }
+    }
+  }
+`
+const result = await client.query({ query })
+const pictureUrl = result.data.user.picture.url</code></pre>
+    </div>
+
+    <div id="debugging" class="step text-center" data-x="3100" data-y="-200" data-z="-2500" data-rotate="-45" data-scale="3">
+      Debugging
+    </div>
+
+    <div id="chrome-debugger" class="step text-center" data-x="3200" data-y="-100" data-z="-2500" data-rotate="-45" data-scale="1">
+      Chrome debugger
+    </div>
+
+    <div id="chrome-debugger-demo" class="step text-center" data-x="3200" data-y="-200" data-z="-2500" data-rotate="-45" data-scale="0.01">
+      <div class="notes">
+        <ul>
+          <li>Sources panel is an IDE</li>
+        </ul>
+      </div>
+      <div></div>
+      <pre>Breakpoints
+        </pre>
+        <img src="assets/video/chrome-breakpoint.gif" style="height: 550px;" />
+    </div>
+
+    <div id="chrome-debugger-blackboxing" class="step text-center" data-x="3210" data-y="-190" data-z="-2500" data-rotate="-45" data-scale="0.01">
+      <div class="notes">
+        <ul>
+          <li>Exclude framework files from stack traces</li>
+        </ul>
+      </div>
+      <pre>Blackboxing
+        </pre>
+      <img src="assets/video/chrome-blackboxing.gif" />
+    </div>
+
+    <div id="vuejs-devtools" class="step text-center" data-x="3000" data-y="-300" data-z="-2500" data-rotate="-45" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>Component inspector with props and computed props</li>
+          <li>Vuex panel with the current state tree, list of mutations and import / export</li>
+          <li>Event panel with all the emitted vue events</li>
+        </ul>
+      </div>
+      <div>Vue.js</div>
+      <div class="small bottom">devtools</div>
+    </div>
+
+    <div id="react-developer-tools" class="step text-center" data-x="2820" data-y="-120" data-z="-2500" data-rotate="-45" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>Component inspector</li>
+        </ul>
+      </div>
+      React
+      <div class="small bottom">developer tools</div>
+    </div>
+
+    <div id="apollo-client-developer-tools" class="step text-center" data-x="3180" data-y="-480" data-z="-2500" data-rotate="-45" data-scale="1">
+      <div class="notes">
+        <ul>
+          <li>List of queries executed on the current page</li>
+          <li>Run queries in an embedded GraphiQL</li>
+        </ul>
+      </div>
+      <div>Apollo</div>
+      <div class="small">developer tools</div>
+    </div>
+
+    <div id="how-to-make-it-easier" class="step text-center section" data-x="3550" data-y="100" data-scale="3">
+      <div class="notes">
+        <ul>
+          <li>How can we make it easier?</li>
+          <li>Define a central package.json of npm packages, like composer.json</li>
+          <li>Integrate webpack into the library system in core?</li>
+        </ul>
+      </div>
+      <div class="small">make it</div>
+      <div>easier?</div>
+    </div>
+
+    <div id="libraries-api-webpack" class="step text-center section" data-x="3550" data-y="300" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>How can we make it easier?</li>
+          <li>Define a central package.json of npm packages, like composer.json</li>
+          <li>Integrate webpack into the library system in core?</li>
+        </ul>
+      </div>
+      <pre>Libraries API
++ webpack?</pre>
+    </div>
+
+    <div id="questions" class="step text-center" data-x="3550" data-y="400" data-scale="0.1">
+      Question time
+    </div>
+
+    <div id="get-in-touch" class="step text-center" data-x="3550" data-y="500" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>If you have questions or just want to talk</li>
+          <li>The link to slides is on my twitter</li>
+        </ul>
+      </div>
+      <pre>blazey
+
+@os_blazey
+      </pre>
+    </div>
+
+    <div id="thank-you" class="step text-center" data-x="3550" data-y="600" data-scale="0.1">
+      <img src="assets/img/it-crowd.webp" />
+    </div>
+
+    <div id="bonus-time" class="step text-center" data-x="3550" data-y="700" data-scale="0.1">
+      Bonus time?
+    </div>
+
+    <div id="should-this-next-project-be-fully-decoupled" class="step text-center loose" data-x="3550" data-y="800" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>Only if there is a reason for that</li>
+          <li>eg. performance is critical and there is budget</li>
+        </ul>
+      </div>
+      Should this next project be fully decoupled?
+    </div>
+
+    <div id="which-embedding-method" class="step text-center loose" data-x="3550" data-y="900" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>Unless it's a super easy, one-off task - use a bundler</li>
+          <li>It would be cool to have a bundler in core</li>
+        </ul>
+      </div>
+      Which embedding method to use?
+    </div>
+
+    <div id="state-management" class="step text-center loose" data-x="3550" data-y="1000" data-scale="0.1">
+      <div class="notes">
+        <ul>
+          <li>For small, isolated components, it isn't</li>
+          <li>It might be a good idea when components need to communicate or share data</li>
+        </ul>
+      </div>
+      Is state management (redux / vuex) required?
+    </div>
+
+</div>
+
+<div id="impress-toolbar"></div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate. <br/>
+       Press 'P' to launch speaker console.</p>
+</div>
+
+<script src="js/impress.js"></script>
+<script src="js/highlight.pack.js"></script>
+<script>
+  impress().init();
+  hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+</html>
