@@ -249,9 +249,9 @@ a:focus {
   /* background: #000;
   color: #fff; */
 
-  bottom: 0;
-  font-size: 0.6em;
-  padding: 1em;
+  top: 0;
+  font-size: 0.8em;
+  padding: 0.8em;
   position: fixed;
   width: 100vw;
 
@@ -314,15 +314,12 @@ a:focus {
   color: #000;
 }
 
-.diamond .sponsor-logo {
-  width: 80%;
+.sponsor-logo {
+  width: 100%;
 }
-.platinium .sponsor-logo {
-  width: 60%;
-}
-.gold .sponsor-logo {
-  /* Gold sponsor logos are in a 3 col grid. */
-  width: 80%;
+
+.one-line {
+  height: 1em;
 }
 
 .small {
@@ -368,6 +365,14 @@ a:focus {
 
 .sans {
   font-family: pt_sans;
+}
+
+.width-auto {
+  width: auto;
+}
+
+.vw-90 {
+  width: 90vw;
 }
 
 .snippet code {
@@ -431,6 +436,10 @@ a:focus {
     letter-spacing: -1px;
 
     z-index: 1;
+}
+
+.event-logo {
+  height: 50%;
 }
 
 .solarized {
